@@ -72,3 +72,32 @@ header h1{
 .projecttitle{
     margin-top:6.25rem;
 }
+
+/* movie */
+
+#moviesections{
+    
+    padding: 0 5% 1rem 5%;
+    margin: 0 12.5% 0 12.5%;
+    background-color:white;
+    
+
+
+}
+
+.character{
+    width:25%;
+    display:inline;
+}
+
+.character img{
+    height: 12.5rem;
+    width:12.5rem;
+}
+
+.dialogue{
+    width:75%;
+    display:inline-block;
+
+}
+
