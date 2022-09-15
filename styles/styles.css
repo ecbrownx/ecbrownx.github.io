@@ -79,7 +79,7 @@ header h1{
     
     padding: 0 5% 1rem 5%;
     margin: 0 12.5% 0 12.5%;
-    background-color:white;
+    background-color:black;
     
 
 
@@ -93,11 +93,26 @@ header h1{
 .character img{
     height: 12.5rem;
     width:12.5rem;
+    padding:1rem 0 0;
 }
 
 .dialogue{
     width:75%;
-    display:inline-block;
+    
 
+}
+
+.dialogue p{
+    margin:1rem 0 0 2rem;
+}
+
+#char1container{
+    display:flex;
+    flex-flow:wrap;
+}
+
+#char2container{
+    display:flex;
+    flex-flow:wrap;
 }
 
