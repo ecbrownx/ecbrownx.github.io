@@ -1,8 +1,8 @@
 let page_number = 0;
 const char1 = document.getElementById('death');
 const char1_dialogue = document.getElementById('deathdialogue');
-const char2 = document.getElementById('bob');
-const char2_dialogue = document.getElementById('bobdialogue');
+const char2 = document.getElementById('rob');
+const char2_dialogue = document.getElementById('robdialogue');
 const dialogue_boxes = document.getElementsByClassName('dialogue');
 const button = document.getElementById('control');
 const musicloc = document.getElementById('ambience');
@@ -35,7 +35,7 @@ const movieControl = () => {
             break;
         case 1:
             char1.src = "./images/death.png"
-            char2.src = "./images/bob.png"
+            char2.src = "./images/rob.PNG"
             char1_dialogue.innerHTML ="Death: Hi, I'm Death and this is Rovoilpmalybyckanui...Rob, for short!"
             char2_dialogue.innerHTML ="Rob: Hi, everyone!"
             char1_dialogue.style.color = "#ffffff";
