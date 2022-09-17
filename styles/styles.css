@@ -80,7 +80,7 @@ header h1{
     padding: 0 5% 1rem 5%;
     margin: 0 12.5% 0 12.5%;
     background-color:black;
-    
+   
 
 
 }
@@ -114,5 +114,11 @@ header h1{
 #char2container{
     display:flex;
     flex-flow:wrap;
+}
+
+#control{
+    width:12.5rem;
+    height: 3.125rem;
+    margin: 2rem 0 1rem;
 }
 

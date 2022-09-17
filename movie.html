@@ -4,6 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./styles/styles.css" type="text/css" rel="stylesheet">
+  
   <title>Dark Age of Nevia Prologue</title>
 </head>
 <body>
@@ -21,18 +22,18 @@
      sodales ut. Tristique senectus et netus et. Id faucibus nisl tincidunt eget nullam non nisi est sit.</p>
   </div>
   <div>
-    <h2 class="movie">Projects</h2>
+    <h2 class="movie">Dark Age of Nevia Prologue</h2>
     <div id="moviesections">
       <div id = "char1container">
-        <div class="character" id="death"><img src = "./images/death.png">   </div>
-        <div class="dialogue" id="deathdialogue"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Duis convallis convallis tellus id interdum velit laoreet.</p></div>
+        <div class="character" ><img id="death" src = "./images/filler_black.png">   </div>
+        <div class="dialogue" ><p id="deathdialogue"></p></div>
       </div>
       <div id = "char2container">
-      <div class="character" id="bob"><img src = "./images/bob.png"> </div>
-      <div class="dialogue" id="bobdialogue"><p>Varius duis at consectetur lorem donec massa sapien. Vitae congue
-        mauris rhoncus aenean vel. Elementum facilisis leo vel fringilla est ullamcorper eget. </p></div>
+      <div class="character" ><img id="bob" src = "./images/filler_black.png"> </div>
+      <div class="dialogue"><p id="bobdialogue"> </p></div>
       </div>
+      <button id="control" onclick = "movieControl()"><span id="btnLabel">Start</span></button>
+      <audio id="ambience" src="./media/SwingTime_MusicByPedro.mp3"></audio>
     </div>
     
       
@@ -41,5 +42,5 @@
    
   </div>
 </body>
- 
+<script src = "./script/movie.js"></script>
 </html>
