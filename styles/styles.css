@@ -96,6 +96,14 @@ header h1{
     padding:1rem 0 0;
 }
 
+#death{
+    visibility:hidden;
+}
+
+#rob{
+    visibility:hidden;
+}
+
 .dialogue{
     width:75%;
     
@@ -104,6 +112,7 @@ header h1{
 
 .dialogue p{
     margin:1rem 0 0 2rem;
+    color:white;
 }
 
 #char1container{
