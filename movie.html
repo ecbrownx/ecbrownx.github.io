@@ -4,35 +4,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./styles/styles.css" type="text/css" rel="stylesheet">
-  
+  <script src = "./script/movie.js" async></script>
   <title>Dark Age of Nevia Prologue</title>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Under Construction</h1>
+    <h1>The Dark Age of Nevia Prologue</h1>
   </header>
   <div id="intro">
-    <h1>Lorem ipsum dolor sit amet...</h1>
-  <p>...consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-    Duis convallis convallis tellus id interdum velit laoreet. Varius duis at consectetur lorem donec massa sapien. Vitae congue
-     mauris rhoncus aenean vel. Elementum facilisis leo vel fringilla est ullamcorper eget. Euismod quis viverra nibh cras pulvinar 
-     mattis nunc sed blandit. Dignissim diam quis enim lobortis scelerisque fermentum. Tellus orci ac auctor augue mauris augue 
-     neque gravida in. Diam in arcu cursus euismod quis. Dui vivamus arcu felis bibendum ut. Imperdiet dui accumsan sit amet. 
-     Consequat semper viverra nam libero justo laoreet sit amet. Vitae elementum curabitur vitae nunc sed velit dignissim 
-     sodales ut. Tristique senectus et netus et. Id faucibus nisl tincidunt eget nullam non nisi est sit.</p>
+    <h2>Details</h2>
+  <p>The Dark Age of Nevia is a series of short stories that I write for a hobby. While I would love for this fantasy world to be a graphic novel, video game, or a TTRPG,
+    a lack of artist talent, time, money, or other such necessary resources make that next to impossible. Here is a prologue I created while experimenting in Unity, which was originally created with C# code
+    and the Unity engine. I recreated it here in Javascript. There are some minor differences between the two; fonts, corrected content, button placement. However, the main story and functionality remains intact.
+  </p>
   </div>
   <div>
     <h2 class="movie">Dark Age of Nevia Prologue</h2>
     <div id="moviesections">
       <div id = "char1container">
         <div class="character" ><img id="death" src = "./images/death.png">   </div>
-        <div class="dialogue" ><p id="deathdialogue"></p></div>
+        <div class="dialogue" ><p><span class="charname"></span><span id="deathdialogue"></span></p></div>
       </div>
       <div id = "char2container">
       <div class="character" ><img id="rob" src = "./images/rob1.png"> </div>
-      <div class="dialogue"><p id="robdialogue"> </p></div>
+      <div class="dialogue"><p><span class="charname"></span><span id="robdialogue"></span> </p></div>
       </div>
-      <button id="control" type="button">Start</button>
+      <button id="btn" type="button"><img id = "shadowbutton" src= "./images/btn_bg.png"><span id = 'btntxt'>Start</span></button>
+      
       <audio id="ambience" src="./media/SwingTime_MusicByPedro.mp3"></audio>
     </div>
     
@@ -41,7 +40,7 @@
     
    
   </div>
-  <script src = "./script/movie.js"></script>
+  <footer><p>&#169 2022  Eric Brown. Dark Age of Nevia and characters created by Eric Brown </p></footer>
 </body>
 
 </html>

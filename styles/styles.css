@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
 html{
     font-family:Arial, Helvetica, sans-serif;
     font-size:16px;
@@ -10,7 +12,8 @@ html{
 }
 
 h2{
-    color:white;
+    color:black;
+    font-family: garamond;
 }
 
 
@@ -20,20 +23,22 @@ body{
 }
 
 header{
+    
     visibility:visible;
-    
-    
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
     height:6rem;
-    top:0;
+    /*top:0;*/
     z-index:100;
     color:white;
     background-color: #895ac2;
-    margin:0 12.5% 0 12.5%;
+    margin:2rem 12.5% 0 12.5%;
     padding: 0 5%;
 }
 
 header h1{
     padding-top:1.5rem;
+    font-family: garamond;
 }
 
 #intro{
@@ -48,6 +53,7 @@ header h1{
     background-color: #895ac2;
     margin: 0 12.5% 0 12.5%;
     padding: 1rem 0;
+    color:white;
 }
 
 #sections{
@@ -73,16 +79,31 @@ header h1{
     margin-top:6.25rem;
 }
 
+footer{
+    text-align:left;
+    background-color:#895ac2;
+    color: white;
+    font-size: 0.75rem;
+    margin:0 12.5%;
+    
+}
+
+footer p{
+    margin:0 1rem;
+    padding: 1rem 0 1rem;
+}
+
 /* movie */
 
+.movie{
+    display:none;
+}
+
 #moviesections{
-    
+
     padding: 0 5% 1rem 5%;
     margin: 0 12.5% 0 12.5%;
     background-color:black;
-   
-
-
 }
 
 .character{
@@ -97,22 +118,29 @@ header h1{
 }
 
 #death{
-    visibility:hidden;
+    visibility: hidden;
 }
 
 #rob{
-    visibility:hidden;
+    visibility: hidden;
 }
 
 .dialogue{
     width:75%;
-    
-
+    font-family: 'MedievalSharp', Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    color: #efe5d5;
+    margin-top:1rem;
+    text-align: left;
 }
 
 .dialogue p{
-    margin:1rem 0 0 2rem;
+    margin-left:2rem;
     color:white;
+}
+
+.charname{
+    font-weight:bolder;
 }
 
 #char1container{
@@ -125,9 +153,31 @@ header h1{
     flex-flow:wrap;
 }
 
-#control{
+#shadowbutton{
+    width:100%;
+    height:auto;
+    display:inline-block;
+    
+}
+
+#btn{
+    position:relative;
     width:12.5rem;
     height: 3.125rem;
     margin: 2rem 0 1rem;
+    border:0;
+    padding:0;
+    font-family: 'MedievalSharp', Arial, Helvetica, sans-serif;
+    font-size:1rem;
+} 
+
+#btntxt{
+    z-index:1;
+    padding-bottom:1rem;
+    position:absolute;
+    top:1rem;
+    bottom:0;
+    left:0;
+    right:0;
 }
 
