@@ -8,34 +8,33 @@ const char2_name = document.getElementsByClassName('charname')[1];
 const dialogue_boxes = document.getElementsByClassName('dialogue');
 const button = document.getElementById('btntxt');
 const musicloc = document.getElementById('ambience');
-//char1.style.visibility= 'hidden';
-//char2.style.visibility = 'hidden';
 
 
+//counter for page. Increments on button click
 const page_number = () => {
     page++
     return page;
 }
 
+//plays record scratch sound after 4 second delay
 const record_Scratch = () => {
     
     setTimeout(function (){musicloc.src ='./media/SPEEDY SPIN.mp3'; musicloc.play()}, 4000)
 }
 
+//plays piano ambient music after 6 second delay
 const piano = () => {
     
     setTimeout(function (){musicloc.src ='./media/darkpiano_noiseplug.mp3'; musicloc.play()}, 6000)
 }
 
+//plays swing music after 6 second delay
 const swing = () => {
     setTimeout(function (){musicloc.src ='./media/SwingTime_MusicByPedro.mp3'; musicloc.play()}, 6000)
 }
 
-
+//determines HTML output based on page counter
 const movieControl = () => {
-
-    //char1.style.visibility= 'hidden';
-    //char2.style.visibility = 'hidden';
 
     const deathLines = ['', "Hi, I'm Death and this is Rovoilpmalybyckanui...Rob, for short!",
     "Rob and I have a story to share, well, I have a story to share. Rob just happens to be in the Void with me because she just died and wanted to hear this story too. Don't feel bad for Rob. She died of natural causes and lived a long and fulfilling life.",

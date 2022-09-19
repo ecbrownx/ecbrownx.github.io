@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
+
+
 html{
     font-family:Arial, Helvetica, sans-serif;
     font-size:16px;
@@ -18,7 +20,7 @@ h2{
 
 
 body{
-    margin:0;
+    margin:0 12.5% 0 12.5%;
     
 }
 
@@ -32,7 +34,7 @@ header{
     z-index:100;
     color:white;
     background-color: #895ac2;
-    margin:2rem 12.5% 0 12.5%;
+    margin-top:2rem;
     padding: 0 5%;
 }
 
@@ -43,7 +45,7 @@ header h1{
 
 #intro{
     position: relative;
-    margin:0 12.5%;
+    
     padding: 1rem 5% 1rem 5%;
     background-color:white;
    
@@ -51,32 +53,36 @@ header h1{
 
 .sectiontitles{
     background-color: #895ac2;
-    margin: 0 12.5% 0 12.5%;
+    margin:0;
     padding: 1rem 0;
     color:white;
 }
 
 #sections{
+    
     padding: 0 5% 1rem 5%;
-    margin: 0 12.5% 0 12.5%;
     background-color:white;
-    display:flex;
-    flex-flow:row wrap;
-    justify-content: center;
+    display:grid;
+    /*flex-flow:row wrap;
+    justify-content: center;*/
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    
 }
 
 .projectname{
-    height: 12.5rem;
-    width:12.5rem;
+    height: 6rem;
+    width:6rem;
     background-image:URL("../images/filler.png");
     background-repeat: no-repeat;
     background-size:contain;
     margin: 1rem 0.5rem 0 0.5rem;
+    padding:1rem;
     
 }
 
 .projecttitle{
-    margin-top:6.25rem;
+    margin-top:1.5rem;
 }
 
 footer{
@@ -84,7 +90,7 @@ footer{
     background-color:#895ac2;
     color: white;
     font-size: 0.75rem;
-    margin:0 12.5%;
+    
     
 }
 
@@ -102,7 +108,7 @@ footer p{
 #moviesections{
 
     padding: 0 5% 1rem 5%;
-    margin: 0 12.5% 0 12.5%;
+    
     background-color:black;
 }
 
