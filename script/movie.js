@@ -82,6 +82,7 @@ const movieControl = () => {
         char2_dialogue.innerHTML = robLines[page]
         button.innerHTML = "Next";
         musicloc.play();
+        musicloc.volume = 0.2;
         
     }else if (page == 3){
         record_Scratch();

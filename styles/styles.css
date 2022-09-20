@@ -39,7 +39,8 @@ header{
 }
 
 header h1{
-    padding-top:1.5rem;
+
+    padding-top:2.5rem;
     font-family: garamond;
 }
 
@@ -58,6 +59,7 @@ header h1{
     color:white;
 }
 
+@media only screen and (min-width:640px){
 #sections{
     
     padding: 0 5% 1rem 5%;
@@ -69,6 +71,45 @@ header h1{
     justify-items: center;
     
 }
+}
+
+@media only screen and (max-width:639px){
+
+    header h1{
+        padding-top:12.5%;
+        font-size:1.5rem;
+    }
+
+    #sections{
+    
+        padding: 0 5% 1rem 5%;
+        background-color:white;
+        display:grid;
+        /*flex-flow:row wrap;
+        justify-content: center;*/
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        
+    }
+}
+
+@media only screen and (max-width:419px){
+   
+
+    #sections{
+    
+        padding: 0 5% 1rem 5%;
+        background-color:white;
+        display:grid;
+        /*flex-flow:row wrap;
+        justify-content: center;*/
+        grid-template-columns: 1fr;
+        justify-items: center;
+        
+    }
+}
+
+
 
 .projectname{
     height: 6rem;
@@ -112,6 +153,7 @@ footer p{
     background-color:black;
 }
 
+@media only screen and (min-width:1000px){
 .character{
     width:25%;
     display:inline;
@@ -121,14 +163,6 @@ footer p{
     height: 12.5rem;
     width:12.5rem;
     padding:1rem 0 0;
-}
-
-#death{
-    visibility: hidden;
-}
-
-#rob{
-    visibility: hidden;
 }
 
 .dialogue{
@@ -145,10 +179,6 @@ footer p{
     color:white;
 }
 
-.charname{
-    font-weight:bolder;
-}
-
 #char1container{
     display:flex;
     flex-flow:wrap;
@@ -158,6 +188,117 @@ footer p{
     display:flex;
     flex-flow:wrap;
 }
+
+}
+
+@media only screen and (max-width:999px){
+    .character{
+        width:25%;
+        display:inline;
+    }
+    
+    .character img{
+        height: 6.5rem;
+        width:6.5rem;
+        padding:1rem 0 0;
+        margin-top:1rem;
+    }
+
+    .dialogue{
+        width:75%;
+        font-family: 'MedievalSharp', Arial, Helvetica, sans-serif;
+        font-size: 1.25rem;
+        color: #efe5d5;
+        margin-top:1rem;
+        text-align: left;
+    }
+    
+    .dialogue p{
+        margin-left:2rem;
+        color:white;
+    }
+
+    #char1container{
+        display:flex;
+        flex-flow:wrap;
+    }
+    
+    #char2container{
+        display:flex;
+        flex-flow:wrap;
+    }
+    
+    }
+
+@media only screen and (max-width:550px){
+    .character{
+        /*width:25%;*/
+        display:inline;
+    }
+    
+    .character img{
+        height: 6.5rem;
+        width:6.5rem;
+        padding:1rem 0 0;
+        margin-top:1rem;
+    }
+
+    .dialogue{
+        /*width:75%;*/
+        font-family: 'MedievalSharp', Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        color: #efe5d5;
+        margin-top:1rem;
+        text-align: left;
+    }
+    
+    .dialogue p{
+        margin-left:1rem;
+        color:white;
+    }
+   
+
+    #char1container{
+        display:flex;
+        flex-flow:wrap;
+        flex-direction:column;
+    }
+    
+    
+    #char2container{
+        display:flex;
+        flex-flow:wrap;
+        flex-direction:column;
+    }
+}
+
+#death{
+    visibility: hidden;
+}
+
+#rob{
+    visibility: hidden;
+}
+
+/*.dialogue{
+    width:75%;
+    font-family: 'MedievalSharp', Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    color: #efe5d5;
+    margin-top:1rem;
+    text-align: left;
+}
+
+.dialogue p{
+    margin-left:2rem;
+    color:white;
+}*/
+
+.charname{
+    font-weight:bolder;
+}
+
+
 
 #shadowbutton{
     width:100%;
