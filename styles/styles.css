@@ -70,7 +70,7 @@ a:visited{
     
 }
 
-#intro{
+.intro{
     position: relative;
     
     padding: 1rem 5% 1rem 5%;
@@ -348,5 +348,47 @@ footer p{
         flex-flow:wrap;
         flex-direction:column;
     }
+}
+
+/*password cracker*/
+
+#gameboard{
+    background-color:white;
+}
+
+#skynettitle{
+    margin:0;
+    padding:1rem 0 1rem;
+}
+
+#skynet{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom:2rem;
+}
+
+.circle{
+    height: 3rem;
+    width: 3rem;
+    border: 0.125rem solid black;
+    border-radius:50%;
+}
+
+.circleP{
+    height: 3rem;
+    width: 3rem;
+    border: 0.125rem solid black;
+    border-radius:50%;
+    margin:0.5rem 0.5rem
+}
+
+.turn{
+display:flex;
+flex-wrap:wrap;
+align-items: center;
+justify-content:center;
+
 }
 
