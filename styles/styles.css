@@ -10,7 +10,7 @@ html{
     background-image:URL("../images/forest.jpg");
     background-repeat: no-repeat;
     background-size:cover;
-    opacity: 0.8;
+    
 }
 
 h2{
@@ -22,6 +22,7 @@ h2{
 
 body{
     margin:0 12.5% 0 12.5%;
+    
     
 }
 
@@ -362,11 +363,30 @@ footer p{
 }
 
 #skynet{
-    display:flex;
+    
+    display:none;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding-bottom:2rem;
+}
+
+#skynethidden{
+    
+        
+        
+        display:flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-bottom:2rem;
+        
+}
+
+#redact{
+    width:16rem;
+    height:4rem;
+    background-color: black;
 }
 
 .circle{
