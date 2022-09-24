@@ -1,0 +1,192 @@
+/*password cracker*/
+
+#gameboard{
+    background-color:white;
+}
+
+#start{
+    margin-top:1rem;
+    width:6rem;
+    height:2rem;
+    margin-bottom:0.5rem;
+}
+
+#skynettitle{
+    margin:0;
+    padding:1rem 0 1rem;
+}
+
+#skynet{
+    
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom:2rem;
+}
+
+#skynethidden{
+    
+        
+        
+        display:none;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding-bottom:2rem;
+        
+}
+
+#redact{
+    width:20rem;
+    height:3.5rem;
+    background-color: black;
+}
+
+.positionlabel{
+    float:clear;
+    width:50%;
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content:center;
+}
+
+.position{
+    
+    font-weight:bold;
+    font-size:1.125rem;
+    padding:0 1.825rem;
+}
+
+.circle{
+    height: 3rem;
+    width: 3rem;
+    border: 0.125rem solid black;
+    border-radius:50%;
+    margin:0.5rem 0.5rem;
+}
+
+.circleP{
+    height: 3rem;
+    width: 3rem;
+    border: 0.125rem solid black;
+    border-radius:50%;
+    margin:0.5rem 0.5rem
+}
+
+#playercontrol{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#playercontrol label{
+    vertical-align:1rem;
+    padding-right:0.5rem;
+}
+
+.red{
+    
+    background-color: red;
+
+}
+
+#redbutton{
+    background-color:red;
+    color:white;
+    height:3rem;
+    width:3rem;
+    border: 0.125rem solid black;
+    border-radius: 50%;
+    margin:0.5rem 0.5rem;
+    
+}
+
+.blue{
+    margin:0.5rem 0.5rem;
+    background-color: blue;
+}
+
+
+#bluebutton{
+    background-color:blue;
+    color:white;
+    height:3rem;
+    width:3rem;
+    border: 0.125rem solid black;
+    border-radius: 50%;
+    
+}
+
+.green{
+    margin:0.5rem 0.5rem;
+    background-color: green;
+  
+}
+
+#greenbutton{
+    background-color:green;
+    color:white;
+    height:3rem;
+    width:3rem;
+    border: 0.125rem solid black;
+    border-radius: 50%;
+    
+}
+
+.yellow{
+    margin:0.5rem 0.5rem;
+    background-color: yellow;
+   
+}
+
+#yellowbutton{
+    background-color:yellow;
+    color:black;
+    height:3rem;
+    width:3rem;
+    border: 0.125rem solid black;
+    border-radius: 50%;
+    
+}
+
+.orange{
+    margin:0.5rem 0.5rem;
+    background-color: orange;
+}
+
+#orangebutton{
+    background-color:orange;
+    color:black;
+    height:3rem;
+    width:3rem;
+    border: 0.125rem solid black;
+    border-radius: 50%;
+    
+}
+
+#playermoves{
+    width:25%;
+    height:25rem;
+    float:left;
+}
+
+.turn{
+float:clear;
+width:50%;
+display:flex;
+flex-wrap:wrap;
+align-items: center;
+justify-content:center;
+
+}
+
+#results{
+    width:25%;
+    height:25rem;
+
+    float:right;
+}
