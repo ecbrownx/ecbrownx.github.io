@@ -79,6 +79,11 @@ a:visited{
    
 }
 
+.nevia{
+    padding: 1rem 5% 1rem 5%;
+    background-color:white;
+}
+
 .sectiontitles{
     background-color: #895ac2;
     margin:0;
