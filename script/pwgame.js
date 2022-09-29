@@ -24,6 +24,8 @@ const newTurn =() =>{
 }
 
 const getSkynetCode = () => {
+    document.getElementById("skynethidden").style.display = "inline-block"
+    document.getElementById("skynet").style.display = "none"
     newTurn();
     for(let i =0; i < 5; i++){
         let j = Math.floor(Math.random() * 5) + 1;
@@ -103,7 +105,7 @@ const checkResults =()=>{
  
         for(let j=0; j < 5; j++){
             resultPosition = positionId()
-            resultfull= "result" + resultPosition
+            resultfull= "result" + resultPosition 
             if(playerGuess[i]===skynetCode[i]){
                 resultArray[i]=0
             }else if(skynetCode.some(ele=>playerGuess[i]===ele)){
@@ -116,14 +118,18 @@ const checkResults =()=>{
     console.log(resultfull)
     
     for (let k = 0; k<5; k++){
+        let position = "result" + turn +  idLetter[k]
         if(resultArray[k] == 0){
-            document.getElementById(resultfull).style.backgroundColor== 'black'
+            
+            console.log(position)
+            document.getElementById(position).style.backgroundColor = 'black'
         }else if(resultArray[k] == 1){
-            resultNumber[k].style.backgroundColor= 'gray'
+            document.getElementById(position).style.backgroundColor= 'gray'
         }else{
-            resultNumber[k].style.backgroundColor= 'red'
+            document.getElementById(position).style.backgroundColor= 'red'
         }   
     }       
+    
     newTurn()
   
 }
@@ -135,8 +141,5 @@ greenButton.addEventListener('click', greenButton);
 yellowButton.addEventListener('click', yellowButton);
 orangeButton.addEventListener('click', orangeButton);
 resultId[0].addEventListener('click',checkResults );
-resultId[1].addEventListener('click',checkResults );
-resultId[2].addEventListener('click',checkResults );
-resultId[3].addEventListener('click',checkResults );
-resultId[4].addEventListener('click',checkResults );
+
 
