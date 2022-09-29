@@ -1,0 +1,32 @@
+#infocontainer{
+    width: 100%;
+
+}
+
+
+
+#infoimg{
+    width:200px;
+    height:200px;
+    float:left;
+    padding:0 1rem 1rem 0;
+}
+
+#infoparagraph{
+    
+    clear:right;
+    
+    
+}
+
+.nevia{
+    padding: 1rem 5% 1rem 5%;
+    background-color:white;
+    clear:both;
+    font-size:1rem;
+    
+}
+
+.nevia p{
+    font-size: 1rem;
+}

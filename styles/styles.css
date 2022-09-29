@@ -26,6 +26,8 @@ body{
     
 }
 
+/*header and navs */
+
 header{
     
     visibility:visible;
@@ -44,16 +46,56 @@ header h1{
     padding-top:1.5rem;
     font-family: garamond;
 }
+
+.navigators{
+    display:block;
+
+}
 nav{
     background-color:#895ac2;
-    width:100%;
+    
+}
+
+ul{
+    margin-top:0;
+}
+
+.navhome{
+    width:65%;
+    display:flex;
+    justify-content: center;
+    float:left;
+    margin-left:15%;
+    
+    
+    
+}
+
+.navhome li{
+    padding-left:1rem;
+}
+
+
+.logos{
+    width:15%;
+    display:flex;
+    justify-content: flex-end;
+    clear:right;
+    padding-inline-start: 0.5rem;
+    
+}
+
+.logos li{
+    padding-left:0.25rem
 }
 
 ul li{
     display:inline;
-    padding-left:1rem;
+    
+    
 }
 
+/* links */
 a:link{
     text-decoration: underline;
     color:white;
@@ -71,18 +113,19 @@ a:visited{
     
 }
 
+.imglink{
+    height:1.375rem;
+    width:1.375rem;
+    vertical-align: middle;
+}
+
 .intro{
     position: relative;
-    
-    padding: 1rem 5% 1rem 5%;
+    padding: 1rem 5% 2.5% 5%;
     background-color:white;
    
 }
 
-.nevia{
-    padding: 1rem 5% 1rem 5%;
-    background-color:white;
-}
 
 .sectiontitles{
     background-color: #895ac2;
@@ -115,8 +158,6 @@ footer p{
         padding:1rem;
         
     }
-
-
 
     #sections{
         
@@ -315,6 +356,11 @@ footer p{
 }
 
 @media only screen and (max-width:550px){
+    #moviescreen{
+        height:46.875rem;
+        background-color: black;
+    }
+
     .character{
         /*width:25%;*/
         display:inline;
@@ -346,6 +392,7 @@ footer p{
         display:flex;
         flex-flow:wrap;
         flex-direction:column;
+        
     }
     
     
@@ -353,7 +400,21 @@ footer p{
         display:flex;
         flex-flow:wrap;
         flex-direction:column;
+        
     }
+
+    /*#btn{
+        position:fixed;
+        bottom: 10vh;
+        left: 10vw;
+        width:12.5rem;
+        height: 3.125rem;
+        margin: 2rem 0 1rem;
+        border:0;
+        margin-top:25%;
+        font-family: 'MedievalSharp', Arial, Helvetica, sans-serif;
+        font-size:1rem;
+    } */
 }
 
 
