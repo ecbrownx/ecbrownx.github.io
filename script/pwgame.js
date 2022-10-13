@@ -2,9 +2,11 @@ const colors =['white','red', 'blue', 'green', 'yellow', 'orange', 'black'];
 const resultColors =['black', 'gray', 'red']
 const skynetCode = [];
 const playerGuess = [0,0,0,0,0];
-const resultArray = [0,0,0,0,0]
+let resultArray = [0,0,0,0,0];
+//const winnerCheck = value => value == 0;
 let turn = 0;
 let colorId = 0;
+
 const idLetter = ['A', 'B', 'C', 'D', 'E'];
 const startButton = document.getElementById('start');
 const positionNum = document.getElementById('positionselect');
@@ -18,14 +20,16 @@ const resultNumber = document.getElementsByClassName('result')
 const resultId = document.getElementsByClassName('submitbtn')
 
 
+
+
 const newTurn =() =>{
     turn++;
     turnNumber.innerHTML = turn;
 }
 
 const getSkynetCode = () => {
-    document.getElementById("skynethidden").style.display = "inline-block"
-    document.getElementById("skynet").style.display = "none"
+    //document.getElementById("skynethidden").style.display = "inline-block"
+  // document.getElementById("skynet").style.display = "none"
     newTurn();
     for(let i =0; i < 5; i++){
         let j = Math.floor(Math.random() * 5) + 1;
@@ -59,8 +63,10 @@ redButton.onclick = ()=>{
     let num = positionSelect();
     let selection = positionId();
     colorId = 1;
-    document.getElementById(selection).style.backgroundColor = colors[colorId];    
-    playerGuess[num-1] = colorId;   
+    
+  
+    playerGuess[num-1] = colorId;  
+    document.getElementById(selection).style.backgroundColor = colors[colorId];   
 }
 
 blueButton.onclick = ()=>{
@@ -99,39 +105,78 @@ orangeButton.onclick = ()=>{
 }
 
 const checkResults =()=>{
-    let resultPosition =''
-    let resultfull =''
-    for ( let i=0; i < 5; i++){
- 
-        for(let j=0; j < 5; j++){
-            resultPosition = positionId()
-            resultfull= "result" + resultPosition 
-            if(playerGuess[i]===skynetCode[i]){
-                resultArray[i]=0
-            }else if(skynetCode.some(ele=>playerGuess[i]===ele)){
-                resultArray[i]=1
-            }else{
-                resultArray[i]=2
-            }
-        }   
+    let position1= "correct" + turn
+    let position2 = "wrong" + turn
+    const correctColors = []
+    let multiColors = false
+    const filteredArrayOne = playerGuess.filter((value) => skynetCode.includes(value))
+    const filteredArrayTwo = filteredArrayOne.filter((value, index) => filteredArrayOne.indexOf(value) === index)
+    
+    
+    for (let i = 0; i < skynetCode.length; i++){
+        
+        if(playerGuess[i] == skynetCode[i]){
+            correctColors.push(playerGuess[i]) 
+            console.log(correctColors)     
+        }
+      
+    
     }
-    console.log(resultfull)
+   
     
-    for (let k = 0; k<5; k++){
-        let position = "result" + turn +  idLetter[k]
-        if(resultArray[k] == 0){
-            
-            console.log(position)
-            document.getElementById(position).style.backgroundColor = 'black'
-        }else if(resultArray[k] == 1){
-            document.getElementById(position).style.backgroundColor= 'gray'
-        }else{
-            document.getElementById(position).style.backgroundColor= 'red'
-        }   
-    }       
     
-    newTurn()
+    
+        for (let i = 0; i <= filteredArrayOne.length; i++){
+            const getFilterLength =playerGuess.filter((value) => value == i)
+            if(getFilterLength.length >= 2 && getFilterLength <=4){
+                multiColors = true
+                console.log(getFilterLength)
+                
+                
+            }
+        console.log(getFilterLength)
+        }
+    
+
   
+    
+    
+    
+    console.log(playerGuess)
+    console.log(skynetCode)
+    console.log(correctColors)
+    console.log(filteredArrayOne)
+    console.log(filteredArrayTwo)
+    console.log(multiColors)
+    document.getElementById(position1).innerHTML = correctColors.length
+    if (correctColors.length === 5 || filteredArrayOne.every(value => value === filteredArrayOne[0])){
+        document.getElementById(position2).innerHTML = 0
+    }
+    else if (multiColors === true){
+        document.getElementById(position2).innerHTML = filteredArrayTwo.length - correctColors.length + 1
+    }else{
+    document.getElementById(position2).innerHTML = filteredArrayOne.length - correctColors.length
+    }
+
+ 
+    if(correctColors.length == skynetCode.length){
+        document.getElementById("skynethidden").style.display = "none"
+        document.getElementById("skynet").style.display = "flex"
+        alert("You won in " + turn +" turns")
+        resultId[0].removeEventListener('click',checkResults );
+    }else if (turn < 6){
+        newTurn()
+    }
+    else{
+        document.getElementById("skynethidden").style.display = "none"
+        document.getElementById("skynet").style.display = "flex"
+        alert("Skynet has won!")
+        resultId[0].removeEventListener('click',checkResults );
+    }
+
+}
+const resetGame = () =>{
+    location.reload()
 }
 
 startButton.addEventListener('click', getSkynetCode, {once:true});
@@ -141,5 +186,6 @@ greenButton.addEventListener('click', greenButton);
 yellowButton.addEventListener('click', yellowButton);
 orangeButton.addEventListener('click', orangeButton);
 resultId[0].addEventListener('click',checkResults );
+document.getElementById('reset').addEventListener('click', resetGame)
 
 
