@@ -28,8 +28,8 @@ const newTurn =() =>{
 }
 
 const getSkynetCode = () => {
-    //document.getElementById("skynethidden").style.display = "inline-block"
-  // document.getElementById("skynet").style.display = "none"
+    document.getElementById("skynethidden").style.display = "inline-block"
+  document.getElementById("skynet").style.display = "none"
     newTurn();
     for(let i =0; i < 5; i++){
         let j = Math.floor(Math.random() * 5) + 1;
